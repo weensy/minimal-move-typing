@@ -27,6 +27,8 @@ ScrollLock::sc03A
 	l::Right
 
 	;Special keys
+	`::Esc
+	sc029::Esc ;半角/全角 key
 	Tab::CapsLock
 	Enter::PrintScreen
 	CapsLock::ScrollLock
