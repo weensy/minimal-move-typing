@@ -8,9 +8,23 @@
 WheelUp::WheelDown
 WheelDown::WheelUp
 
-;CapsLock operate with 英数 key
-;(It only works on Japanese)
-ScrollLock::sc03A
+;CapsLock works as 英数 key in Japanese
+; Shortly press: 英数
+; Press and hold: Nothing
+ScrollLock::
+prevTime := A_TickCount
+Loop
+{
+	If !GetKeyState("ScrollLock","P")
+	{
+		Break
+	}
+	Sleep, 1
+}
+TimeInterval := A_TickCount - prevTime
+If (TimeInterval < 225)
+	Send, {sc03A}
+Return
 
 ;CapsLock combinations
 #If GetKeyState("ScrollLock","P")
@@ -28,7 +42,7 @@ ScrollLock::sc03A
 
 	;Special keys
 	`::Esc
-	sc029::Esc ;半角/全角 key
+	sc029::Esc
 	Tab::CapsLock
 	Enter::PrintScreen
 	CapsLock::ScrollLock
