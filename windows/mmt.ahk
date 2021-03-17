@@ -11,7 +11,7 @@ WheelDown::WheelUp
 ;CapsLock works as 英数 key in Japanese
 ; Shortly press: 英数
 ; Press and hold: Nothing
-ScrollLock::
+*ScrollLock::
 prevTime := A_TickCount
 Loop
 {
