@@ -1,8 +1,8 @@
-﻿;----------------------------------------------
-;           This script assumes that
-;            CAPSLOCK && SCROLLLOCK
-; are replaced each other through the registry.
-;-----------------------------------------------
+﻿;------------------------------
+;   This script assumes that
+;  CAPSLOCK is changed to F24
+;   by registry registration
+;------------------------------
 
 ;Reverse Mouse Wheel
 WheelUp::WheelDown
@@ -11,23 +11,23 @@ WheelDown::WheelUp
 ;CapsLock works as 英数 key in Japanese
 ; Shortly press: 英数
 ; Press and hold: Nothing
-*ScrollLock::
+*f24::
 prevTime := A_TickCount
 Loop
 {
-	If !GetKeyState("ScrollLock","P")
+	If !GetKeyState("f24","P")
 	{
 		Break
 	}
 	Sleep, 1
 }
 TimeInterval := A_TickCount - prevTime
-If (TimeInterval < 225)
+If (TimeInterval < 150)
 	Send, {sc03A}
 Return
 
 ;CapsLock combinations
-#If GetKeyState("ScrollLock","P")
+#If GetKeyState("f24","P")
     ;Arrow keys for left hand
 	w::Up
 	a::Left
