@@ -54,8 +54,8 @@ Return
 	8::F8
 	9::F9
 	0::F10
-	-::F11
-	=::F12
+	;=::F12
+	^::F12
 
 	;In combination, CapsLock does not work as 英数
 	w up::
