@@ -23,7 +23,12 @@
 
 	;Special keys
 	`::Esc
-	Tab::CapsLock
+	Tab::
+	if GetKeyState("CapsLock","T")
+	SetCapsLockState, Off
+	else
+	SetCapsLockState, On
+	return
 	Enter::PrintScreen
 	Backspace::Delete 
 	h::Home

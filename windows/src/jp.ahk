@@ -31,7 +31,12 @@ Return
 	;Special keys
 	`::Esc
 	sc029::Esc
-	Tab::CapsLock
+	Tab::
+	if GetKeyState("CapsLock","T")
+	SetCapsLockState, Off
+	else
+	SetCapsLockState, On
+	return
 	Enter::PrintScreen
 	Backspace::Delete 
 	h::Home
@@ -99,7 +104,6 @@ Return
 	Return
 	Tab up::
 	comb := True
-	Send, {CapsLock up}
 	Return
 	Enter up::
 	comb := True
