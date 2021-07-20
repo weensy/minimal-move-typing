@@ -1,2 +1,2 @@
-MMT For Windows
+# MMT For Windows
 These are AutoHotkey script files.
