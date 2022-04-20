@@ -2,3 +2,6 @@
 This is a custom json file for Karabiner-Elements.  
 So first, you need the Karabiner-Elements:  
 https://karabiner-elements.pqrs.org/
+
+## JSON Location
+~/.config/karabiner/assets/complex_modifications/
